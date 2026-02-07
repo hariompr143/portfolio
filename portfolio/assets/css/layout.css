@@ -1,0 +1,24 @@
+/* Content and sidebar layout */
+
+.content-with-sidebar {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(260px, 0.9fr);
+    gap: 20px;
+}
+
+/* Sidebar shell is populated from components/sidebar.html */
+#site-sidebar {
+    min-width: 0;
+}
+
+/* Small screens */
+
+@media (max-width: 900px) {
+    .content-with-sidebar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .sidebar-shell {
+        position: static;
+    }
+}
